@@ -1,0 +1,22 @@
+.container {
+	padding-bottom: 10px;
+}
+
+.row > h2,
+.row > p {
+	margin: 0;
+	padding: 20px;
+}
+
+.card {
+	margin: 10px 0;
+	padding: 15px;
+	border-width: 2px;
+	border-radius: 0;
+	border-color: var(--violet);
+}
+
+.card-body > a {
+	padding: 10px;
+	font-size: 14px;
+}

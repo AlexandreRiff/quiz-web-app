@@ -1,0 +1,12 @@
+Options All -Indexes
+
+<FilesMatch "\.(env|html)$">
+	Deny from all
+</FilesMatch>
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.+)$ index.php?uri=$1 [NC,QSA,L]

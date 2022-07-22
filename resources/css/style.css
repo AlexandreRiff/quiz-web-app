@@ -1,0 +1,27 @@
+.btn-bd-primary {
+	--bs-btn-font-weight: 600;
+	--bs-btn-color: #fff;
+	--bs-btn-bg: var(--violet);
+	--bs-btn-border-color: var(--violet);
+	--bs-btn-hover-color: #fff;
+	--bs-btn-hover-bg: #6528e0;
+	--bs-btn-hover-border-color: #6528e0;
+	--bs-btn-focus-shadow-rgb: 112.520718, 44.062154, 249.437846;
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: #5a23c8;
+	--bs-btn-active-border-color: #5a23c8;
+	text-transform: uppercase;
+	border-radius: 0;
+	font-size: 14px;
+}
+
+.swal2-confirm {
+	background-color: var(--violet) !important;
+}
+
+.swal2-confirm, .swal2-cancel {
+	font-size: 14px !important;
+	text-transform: uppercase;
+	border-radius: 0 !important;
+}
+

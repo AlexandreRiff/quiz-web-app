@@ -1,0 +1,140 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	padding: 20%;
+}
+
+.w-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-width: 230px;
+}
+
+.question {
+	border: var(--border-default);
+}
+
+.question-text {
+	flex: 1;
+	margin: 0;
+	padding: 20px;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.answer-alternative {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	width: calc(50% - 20px);
+	margin-top: 40px;
+	border: var(--border-default);
+}
+
+.answer-alternative:nth-child(odd) {
+	margin-right: 40px;
+}
+
+.answer-alternative-letter {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 30px;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: white;
+	background-color: var(--violet);
+}
+
+.answer-alternative-text {
+	flex: 1;
+	margin: 0;
+	padding: 20px;
+	font-size: 18px;
+}
+
+.btn-next-question {
+	visibility: hidden;
+	margin-top: 40px;
+	padding: 15px;
+	font-size: 14px;
+}
+
+.wrong {
+	border: var(--border-wrong);
+}
+
+.wrong-letter {
+	background-color: var(--red);
+}
+
+.correct {
+	border: var(--border-correct);
+}
+
+.correct-letter {
+	background-color: var(--green);
+}
+
+/* * breakpoints */
+@media (max-width: 1400px) {
+	.wrapper {
+		padding: 10%;
+	}
+}
+
+@media (max-width: 768px) {
+	.wrapper {
+		height: inherit;
+		padding: 10%;
+	}
+
+	.answer {
+		flex-direction: column;
+	}
+
+	.answer-alternative {
+		width: 100%;
+	}
+
+	.answer-alternative:nth-child(odd) {
+		margin-right: 0;
+	}
+}
+/* * end breakpoints */
+
+.modal-header,
+.modal-footer {
+	justify-content: center;
+}
+
+.modal-title {
+	font-size: 30px;
+	font-weight: 600;
+	color: var(--green);
+}
+
+.modal-body > p {
+	font-size: 20px;
+}
+
+.modal-footer > button,
+.modal-footer > a {
+	padding: 10px;
+	font-size: 14px;
+}

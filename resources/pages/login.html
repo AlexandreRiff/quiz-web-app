@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz | Login</title>
+		<link rel="stylesheet" href="/quiz/public/dist/style-libs.min.css" />
+		<!-- custom style -->
+		<link rel="stylesheet" href="/quiz/public/dist/style-custom.min.css" />
+		<link rel="stylesheet" href="/quiz/public/dist/style-login.min.css" />
+		<!-- end custom style -->
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="w-row">
+				<div class="form-title">
+					<h5>Painel de Administração</h5>
+				</div>
+				<form id="form-login" method="POST" action="/quiz/login/authUser">
+					<div class="mb-3">
+						<label for="login-email" class="form-label"
+							>Endereço de e-mail:</label
+						>
+						<input
+							type="email"
+							class="form-control"
+							id="login-email"
+							aria-describedby="emailHelp"
+							name="loginEmail"
+						/>
+					</div>
+					<div class="mb-3">
+						<label for="login-password" class="form-label">Senha:</label>
+						<input
+							type="password"
+							class="form-control"
+							id="login-password"
+							name="loginPassword"
+						/>
+					</div>
+					<button type="submit" class="btn btn-bd-primary">Entrar</button>
+				</form>
+			</div>
+		</div>
+		<script src="/quiz/public/dist/script-libs.min.js"></script>
+		<!-- custom script -->
+		<script src="/quiz/public/dist/script-login.min.js"></script>
+		<!-- end custom script -->
+	</body>
+</html>

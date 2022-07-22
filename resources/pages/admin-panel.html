@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz | Painel de Administração</title>
+		<link rel="stylesheet" href="/quiz/public/dist/style-libs.min.css" />
+		<!-- custom style -->
+		<link rel="stylesheet" href="/quiz/public/dist/style-custom.min.css" />
+		<link rel="stylesheet" href="/quiz/public/dist/style-admin-panel.min.css" />
+		<!-- end custom style -->
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- header -->
+			<div class="header">
+				<h3>Painel de Administração</h3>
+				<div>
+					<button
+						type="button"
+						class="btn btn-bd-primary"
+						id="btn-add"
+						data-bs-toggle="modal"
+						data-bs-target="#staticBackdrop"
+					>
+						<i class="bi bi-plus-lg"></i>
+					</button>
+					<button type="button" class="btn btn-bd-primary" id="btn-show-search">
+						<i class="bi bi-search"></i>
+					</button>
+				</div>
+			</div>
+			<!-- end header -->
+
+			<!-- search sidebar -->
+			<div class="sidebar hidden-sidebar">
+				<form id="form-search-questions">
+					<div class="mb-3">
+						<label for="in-search-questions-id" class="form-label">ID:</label>
+						<input
+							type="number"
+							class="form-control"
+							id="in-search-questions-id"
+							name="inSearchQuestionsId"
+						/>
+					</div>
+					<div class="mb-3">
+						<label for="in-search-questions-text" class="form-label"
+							>Pergunta:</label
+						>
+						<input
+							type="text"
+							class="form-control"
+							id="in-search-questions-text"
+							name="inSearchQuestionsText"
+						/>
+					</div>
+					<div class="mb-3">
+						<label for="in-search-questions-category" class="form-label"
+							>Categoria:</label
+						>
+						<input
+							type="text"
+							class="form-control"
+							id="in-search-questions-category"
+							name="inSearchQuestionsCategory"
+						/>
+					</div>
+					<button type="button" class="btn btn-bd-primary" id="btn-search">
+						Buscar <i class="bi bi-search"></i>
+					</button>
+				</form>
+			</div>
+			<!-- end search sidebar -->
+
+			<!-- dynamically added content -->
+			<div class="content"></div>
+			<!-- end dynamically added content -->
+
+			<!-- modal to add question -->
+			<div
+				class="modal fade"
+				id="staticBackdrop"
+				data-bs-backdrop="static"
+				data-bs-keyboard="false"
+				tabindex="-1"
+				aria-labelledby="staticBackdropLabel"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="staticBackdropLabel">
+								Adicionar Pergunta
+							</h5>
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+						<div class="modal-body">
+							<form
+								id="form-add-edit-question"
+								class="needs-validation"
+								novalidate
+							>
+								<div class="mb-3">
+									<label for="in-add-edit-question-text" class="form-label"
+										>Pergunta:</label
+									>
+									<input
+										type="text"
+										class="form-control"
+										id="in-add-edit-question-text"
+										name="inAddEditQuestionText"
+										required
+									/>
+									<div class="invalid-feedback">
+										O campo não pode ser vazio.
+									</div>
+								</div>
+								<div class="mb-3">
+									<label for="in-add-edit-question-category" class="form-label"
+										>Categoria:</label
+									>
+									<input
+										type="text"
+										class="form-control"
+										id="in-add-edit-question-category"
+										name="inAddEditQuestionCategory"
+										required
+									/>
+									<div class="invalid-feedback">
+										O campo não pode ser vazio.
+									</div>
+								</div>
+								<p>Alternativas:</p>
+								<div class="answer-alternatives">
+									<div class="form-check">
+										<input
+											class="form-check-input"
+											type="radio"
+											name="inAddEditCorrectAnswerAlternative"
+											id="in-add-edit-correct-answer-alternative-a"
+											value="A"
+											checked
+										/>
+										<label
+											class="form-check-label"
+											for="in-add-edit-correct-answer-alternative-a"
+										>
+											A
+										</label>
+									</div>
+									<div>
+										<input
+											type="text"
+											class="form-control"
+											id="in-add-edit-answer-alternative-a"
+											name="inAddEditAnswerAlternativeA"
+											required
+										/>
+										<div class="invalid-feedback">
+											O campo não pode ser vazio.
+										</div>
+									</div>
+								</div>
+
+								<div class="answer-alternatives">
+									<div class="form-check">
+										<input
+											class="form-check-input"
+											type="radio"
+											name="inAddEditCorrectAnswerAlternative"
+											id="in-add-edit-correct-answer-alternative-b"
+											value="B"
+										/>
+										<label
+											class="form-check-label"
+											for="in-add-edit-correct-answer-alternative-b"
+										>
+											B
+										</label>
+									</div>
+									<div>
+										<input
+											type="text"
+											class="form-control"
+											id="in-add-edit-answer-alternative-b"
+											name="inAddEditAnswerAlternativeB"
+											required
+										/>
+										<div class="invalid-feedback">
+											O campo não pode ser vazio.
+										</div>
+									</div>
+								</div>
+
+								<div class="answer-alternatives">
+									<div class="form-check">
+										<input
+											class="form-check-input"
+											type="radio"
+											name="inAddEditCorrectAnswerAlternative"
+											id="in-add-edit-correct-answer-alternative-c"
+											value="C"
+										/>
+										<label
+											class="form-check-label"
+											for="in-add-edit-correct-answer-alternative-c"
+										>
+											C
+										</label>
+									</div>
+									<div>
+										<input
+											type="text"
+											class="form-control"
+											id="in-add-edit-answer-alternative-c"
+											name="inAddEditAnswerAlternativeC"
+											required
+										/>
+										<div class="invalid-feedback">
+											O campo não pode ser vazio.
+										</div>
+									</div>
+								</div>
+
+								<div class="answer-alternatives">
+									<div class="form-check">
+										<input
+											class="form-check-input"
+											type="radio"
+											name="inAddEditCorrectAnswerAlternative"
+											id="in-add-edit-correct-answer-alternative-d"
+											value="D"
+										/>
+										<label
+											class="form-check-label"
+											for="in-add-edit-correct-answer-alternative-d"
+										>
+											D
+										</label>
+									</div>
+									<div>
+										<input
+											type="text"
+											class="form-control"
+											id="in-add-edit-answer-alternative-d"
+											name="inAddEditAnswerAlternativeD"
+											required
+										/>
+										<div class="invalid-feedback">
+											O campo não pode ser vazio.
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-secondary"
+								data-bs-dismiss="modal"
+							>
+								Cancelar
+								<i class="bi bi-x-lg"></i>
+							</button>
+							<button
+								type="submit"
+								class="btn btn-bd-primary"
+								id="btn-save"
+								form="form-add-edit-question"
+							>
+								Salvar
+								<i class="bi bi-save"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end modal to add question -->
+		</div>
+		<script src="/quiz/public/dist/script-libs.min.js"></script>
+		<!-- custom script -->
+		<script src="/quiz/public/dist/script-admin-panel.min.js"></script>
+		<!-- end custom script -->
+	</body>
+</html>

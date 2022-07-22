@@ -1,0 +1,8 @@
+:root {
+	--violet: #712cf9;
+	--green: #22ee00;
+	--red: red;
+	--border-default: 3px solid var(--violet);
+	--border-correct: 3px solid var(--green);
+	--border-wrong: 3px solid var(--red);
+}

@@ -1,0 +1,114 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 70px;
+	padding: 0 20px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+	background-color: #fff;
+}
+
+.sidebar {
+	position: fixed;
+	right: 0;
+	width: 250px;
+	height: 100vh;
+	padding: 100px 30px 30px 30px;
+	z-index: 2;
+	border-left: 1px solid rgba(0, 0, 0, 0.175);
+	background-color: #fff;
+	overflow-y: scroll;
+}
+
+.content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 70px 30px 30px 30px;
+	z-index: 1;
+}
+
+.header > h3 {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+.header > div {
+	min-width: 95px;
+}
+
+.header > div > button {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.header > div > button:first-child {
+	margin-right: 10px;
+}
+
+.card {
+	width: 15rem;
+	margin: 30px 30px 0 0;
+}
+
+.answer-alternatives {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 20px;
+}
+
+.answer-alternatives > div:nth-child(2) {
+	flex: 1;
+}
+
+.answer-alternatives > div:nth-child(1) {
+	margin-right: 20px;
+}
+
+.modal-body > form {
+	padding: 0 20px;
+}
+
+.btn-secondary {
+	font-size: 14px;
+	border-radius: 0;
+	text-transform: uppercase;
+}
+
+#form-search-questions {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-title {
+	font-size: 1rem;
+}
+
+.show-sidebar {
+	transform: translate(0);
+	transition: 0.5s;
+}
+
+.hidden-sidebar {
+	transform: translate(250px);
+	transition: 0.5s;
+}
+
+@media (max-width: 576px) {
+	.content {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.card {
+		margin-right: 0;
+	}
+}

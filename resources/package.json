@@ -1,0 +1,45 @@
+{
+  "name": "quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@popperjs/core": "^2.11.5",
+    "@sweetalert2/theme-bootstrap-4": "^5.0.11",
+    "bootstrap": "^5.2.0",
+    "bootstrap-icons": "^1.9.1",
+    "he": "^1.2.0",
+    "sweetalert2": "^11.4.23"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "babel-loader": "^8.2.5",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "html-minimizer-webpack-plugin": "^4.0.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-remove-empty-scripts": "^0.8.1"
+  },
+  "scripts": {
+    "build": "webpack -c ./webpack.config.js --mode production",
+    "build-dev": "webpack -c ./webpack.config.js --mode development --progress -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandreRiff/PW_Quiz.git"
+  },
+  "author": "Alexandre Riff da Costa <alexandre.rdcosta@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexandreRiff/PW_Quiz/issues"
+  },
+  "homepage": "https://github.com/AlexandreRiff/PW_Quiz#readme"
+}

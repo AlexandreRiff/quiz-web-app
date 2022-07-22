@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz | Teste</title>
+		<link rel="stylesheet" href="/quiz/public/dist/style-libs.min.css" />
+		<!-- custom style -->
+		<link rel="stylesheet" href="/quiz/public/dist/style-custom.min.css" />
+		<link rel="stylesheet" href="/quiz/public/dist/style-quiz.min.css" />
+		<!-- end custom style -->
+	</head>
+	<!-- <body onload="list()"> -->
+	<body>
+		<div class="wrapper">
+			<div class="w-row question">
+				<!-- dynamically added content -->
+				<p class="question-text"></p>
+				<!-- end dynamically added content -->
+			</div>
+			<div class="w-row answer">
+				<div class="answer-alternative" data-letter="A">
+					<span class="answer-alternative-letter">A</span>
+					<!-- dynamically added content -->
+					<p class="answer-alternative-text"></p>
+					<!-- end dynamically added content -->
+				</div>
+				<div class="answer-alternative" data-letter="B">
+					<span class="answer-alternative-letter">B</span>
+					<!-- dynamically added content -->
+					<p class="answer-alternative-text"></p>
+					<!-- end dynamically added content -->
+				</div>
+				<div class="answer-alternative" data-letter="C">
+					<span class="answer-alternative-letter">C</span>
+					<!-- dynamically added content -->
+					<p class="answer-alternative-text"></p>
+					<!-- end dynamically added content -->
+				</div>
+				<div class="answer-alternative" data-letter="D">
+					<span class="answer-alternative-letter">D</span>
+					<!-- dynamically added content -->
+					<p class="answer-alternative-text"></p>
+					<!-- end dynamically added content -->
+				</div>
+			</div>
+			<div class="w-row">
+				<button class="btn btn-bd-primary btn-next-question">Próxima questão <i class="bi bi-arrow-right"></i></button>
+			</div>
+			<!-- Modal -->
+			<div
+				class="modal fade text-center"
+				id="staticBackdrop"
+				data-bs-backdrop="static"
+				data-bs-keyboard="false"
+				tabindex="-1"
+				aria-labelledby="staticBackdropLabel"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="staticBackdropLabel">Parabéns!</h5>
+						</div>
+						<div class="modal-body">
+							<p>Você completou o quiz!</p>
+							<p id="quiz-result">Você acertou: 2 de 8 questões.</p>
+						</div>
+						<div class="modal-footer">
+							<a href="/quiz/home" class="btn btn-bd-primary">Voltar para os quizzes <i class="bi bi-arrow-return-left"></i></a>
+							<button
+								type="button"
+								class="btn btn-bd-primary"
+								id="btn-try-again"
+								data-bs-dismiss="modal"
+							>
+								Tentar novamente
+								<i class="bi bi-arrow-repeat"></i>
+							</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/quiz/public/dist/script-libs.min.js"></script>
+		<!-- custom script -->
+		<script src="/quiz/public/dist/script-quiz.min.js"></script>
+		<!-- end custom script -->
+	</body>
+</html>
