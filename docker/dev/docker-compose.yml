@@ -1,0 +1,43 @@
+services:
+  quiz-app:
+    build:
+      context: ../..
+      dockerfile: ./docker/Dockerfile
+      target: app
+    image: quiz-app
+    container_name: quiz-app
+    volumes:
+      - ../..:/var/www/html/quiz
+    ports:
+      - 80:80
+    networks:
+      - app
+      - db
+    restart: on-failure
+
+  quiz-db:
+    build:
+      context: ../..
+      dockerfile: ./docker/Dockerfile
+      target: db
+    image: quiz-db
+    container_name: quiz-db
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=quiz
+      - MYSQL_USER=quiz
+      - MYSQL_PASSWORD=quiz
+    volumes:
+      - ../../database:/docker-entrypoint-initdb.d
+      - ../../docker-db-volume:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - db
+    restart: on-failure
+
+networks:
+  app:
+    driver: bridge
+  db:
+    driver: bridge

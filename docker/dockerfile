@@ -1,0 +1,13 @@
+FROM php:8.2.20-apache as app
+
+RUN a2enmod rewrite
+
+RUN docker-php-ext-install pdo_mysql
+
+COPY . /var/www/html/
+
+#=====================================
+
+FROM mysql:latest as db
+
+COPY ./database /docker-entrypoint-initdb.d
