@@ -35,6 +35,6 @@ INSERT INTO
 	quiz_user (email, password)
 VALUES
 	(
-		'alexandre.rdcosta@gmail.com',
-		'$2y$10$Aa9WJygFn0DSwkReDEqA..5S6zycacb94.BhI33i40UMKFr1eif56'
+		'admin@email.com',
+		'$2y$10$mzw1V73G1qSTzomtH3TrJeadauqn4kA7yA.hz5rtVAsPsJhE1PvWu' -- admin
 	);
