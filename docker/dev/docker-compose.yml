@@ -1,4 +1,14 @@
 services:
+  quiz-frontend:
+    image: node:20.14.0
+    container_name: quiz-frontend
+    working_dir: "/app/resources"
+    command: bash -c "npm install && npm run build"
+    volumes:
+      - ../../resources:/app/resources
+      - ../../public:/app/public
+    restart: on-failure
+
   quiz-app:
     build:
       context: ../..

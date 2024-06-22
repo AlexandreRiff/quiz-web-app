@@ -1,10 +1,24 @@
+FROM node:20.14.0 as frontend
+
+WORKDIR /app
+
+COPY ./resources .
+
+RUN npm install && npm run build
+
+#=====================================
+
 FROM php:8.2.20-apache as app
 
 RUN a2enmod rewrite
 
 RUN docker-php-ext-install pdo_mysql
 
-COPY . /var/www/html/
+WORKDIR /var/www/html/quiz
+
+COPY . .
+
+COPY --from=frontend --chown=www-data:www-data ./public ./public
 
 #=====================================
 
