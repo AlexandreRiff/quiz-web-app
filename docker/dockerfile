@@ -24,4 +24,6 @@ COPY --from=frontend --chown=www-data:www-data ./public ./public
 
 FROM mysql:latest as db
 
+ENV LANG=C.UTF-8
+
 COPY ./database /docker-entrypoint-initdb.d
