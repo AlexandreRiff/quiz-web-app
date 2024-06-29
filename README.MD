@@ -1,10 +1,11 @@
-# Quiz Web
+# <center>Quiz</center>
 
-Projeto desenvolvido para aprovação na disciplina de Programação Web no Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas.
+![Tela Inicial](./docs/imgs/quiz-tela-inicial.gif)
+![Painel de Administração](./docs/imgs/quiz-painel-admin.gif)
 
 ## 📖 Descrição
 
-Este projeto é um quiz web desenvolvido em PHP. Ele permite que os usuários participem de quizzes, respondendo perguntas de múltipla escolha e recebendo uma pontuação com base em suas respostas.
+Este projeto é um quiz desenvolvido em PHP. Ele permite que os usuários participem de quizzes, respondendo perguntas de múltipla escolha e recebendo uma pontuação com base em suas respostas.
 
 ## ⚙️ Funcionalidades
 
