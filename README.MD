@@ -62,5 +62,5 @@ http://localhost/quiz/adminPanel
 
 Utilize as seguintes credenciais:
 
-- Usuário: admin
+- Usuário: admin@email.com
 - Senha: admin
