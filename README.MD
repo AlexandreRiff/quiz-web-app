@@ -1,4 +1,4 @@
-# <center>Quiz</center>
+# <h1 align="center">Quiz</h1>
 
 ![Tela Inicial](./docs/imgs/quiz-tela-inicial.gif)
 ![Painel de Administração](./docs/imgs/quiz-painel-admin.gif)
@@ -31,19 +31,19 @@ Este projeto é um quiz desenvolvido em PHP. Ele permite que os usuários partic
 
 1. Clone o repositório para a sua máquina local:
 
-```bash
-git clone https://github.com/AlexandreRiff/web-quiz.git
+```shell
+git clone https://github.com/AlexandreRiff/quiz-web-app.git
 ```
 
 2. Navegue até o diretório do projeto:
 
-```bash
-cd web-quiz
+```shell
+cd quiz-web-app
 ```
 
-3. Execute o docker:
+3. Construa e Suba os Containers:
 
-```bash
+```shell
 cd docker/dev && docker-compose up -d --build
 ```
 
@@ -63,5 +63,5 @@ http://localhost/quiz/adminPanel
 
 Utilize as seguintes credenciais:
 
-- Usuário: admin@email.com
-- Senha: admin
+- Usuário: `admin@email.com`
+- Senha: `admin`
